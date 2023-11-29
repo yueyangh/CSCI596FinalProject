@@ -220,7 +220,7 @@ Execution time (s): 3.024810756
 ```
 <img src="imgs/carc16_res.png" style="zoom:80%;" />
 
-|                                 | Sequential FFT    | Parallel FFT using 8 ranks |
+|                                 | Sequential FFT    | Parallel FFT using 16 ranks |
 | ------------------------------- | ----------------- | -------------------------- |
 | Average Execution Time (Second) | 7.888008770666666 | 3.0162059243333332         |
 
