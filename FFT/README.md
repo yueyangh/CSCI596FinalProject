@@ -1,16 +1,16 @@
-## Implementation of FFT using MPI
+# Implementation of FFT using MPI
 
-### 1. Introduction
+## 1. Introduction
 
 This implementation of radix-2 FFT algorithms is based on [mpi4py](https://github.com/mpi4py/mpi4py) (Python bindings for the *Message Passing Interface*([MPI](https://www.mpi-forum.org/)) standard)
 
-#### 1.1 Background
+### 1.1 Background
 
 A **fast Fourier transform** (**FFT**) is an algorithm that computes the [discrete Fourier transform](https://en.wikipedia.org/wiki/Discrete_Fourier_transform) (DFT) of a sequence, or its inverse (IDFT). [Fourier analysis](https://en.wikipedia.org/wiki/Fourier_analysis) converts a signal from its original domain (often time or space) to a representation in the [frequency domain](https://en.wikipedia.org/wiki/Frequency_domain) and vice versa. (Source: [Wikipedia](https://en.wikipedia.org/wiki/Fast_Fourier_transform))
 
-#### 1.2 Implementation Detail
+### 1.2 Implementation Detail
 
-##### 1.2.1 Procedure
+#### 1.2.1 Procedure
 
 1. Perform [bit-reversal permutation](https://en.wikipedia.org/wiki/Bit-reversal_permutation) on the input sequence
 2. Assign  $N/P$ numbers to each rank
@@ -20,7 +20,7 @@ A **fast Fourier transform** (**FFT**) is an algorithm that computes the [discre
    * For example, if $N/P=2$ (Each rank is assigned to 2 numbers), each rank can execute one stage (2-point FFT/DFT) of butterfly operations without communication because all the required data are present in its own memory
 4. Perform butterfly operations with communication which includes identifying the partner, sending its data, and receiving the partner's data.
 
-##### 1.2.2 Example
+#### 1.2.2 Example
 
 + The diagram below is a FFT butterfly diagram ($N=16,P=4$)
 + [ $a_0$, $a_1$, ..., $a_{15}$ ] is the input sequence
@@ -31,7 +31,7 @@ A **fast Fourier transform** (**FFT**) is an algorithm that computes the [discre
 
 <img src="imgs/butterfly.jpg" style="zoom:60%;" />
 
-##### 1.2.3 Limitation
+#### 1.2.3 Limitation
 
 `mpi_fft.py`has the following limitations:
 
@@ -39,7 +39,7 @@ A **fast Fourier transform** (**FFT**) is an algorithm that computes the [discre
 2. The number of input data must be a power of 2
 3. If the number of ranks is equal to or greater than the number of input data, the number of ranks will be set to the number of input data / 2
 
-### 2. File
+## 2. File
 * **mpi_fft.py**
 
   An implementation of radix-2 FFT algorithms using mpi4py
@@ -84,20 +84,20 @@ A **fast Fourier transform** (**FFT**) is an algorithm that computes the [discre
 
   A purely sequential implementation of FFT
 
-### 3. Experiment (Local)
+## 3. Experiment (Local)
 
-#### 3.1 Experimental Setup
+### 3.1 Experimental Setup
 
 * **CPU**: Apple M1 Pro (8 physcal core)
 * **Input**: input20.in ($2^{20} = 1048576$ numbers)
 
-#### 3.2 Method
+### 3.2 Method
 
 1. Run sequential FFT and parallel FFT (using 8 ranks) 3 times each version
 2. Record the execution time of each run
 3. Calculate the average execution time of sequential FFT and parallel FFT
 
-#### 3.3 Experiment Shell Script
+### 3.3 Experiment Shell Script
 
 ```bash
 counter=0
@@ -112,7 +112,7 @@ while [ $counter -lt 3 ]; do
 done
 ```
 
-#### 3.4 Result
+### 3.4 Result
 
 ```bash
 ***** Sequential FFT *****
@@ -134,17 +134,17 @@ Execution time (s): 3.3153989999999567
 | ------------------------------- | ----------------- | -------------------------- |
 | Average Execution Time (Second) | 5.534798666666688 | 3.3318089999999834         |
 
-#### 3.5 Analysis
+### 3.5 Analysis
 
 The experimental results show that parallel FFT runs faster than sequential FFT in this experimental setup.
 
-### 4. Experiment (USC CARC)
+## 4. Experiment (USC CARC)
 
 This experiment is carried out on CARC's general-use HPC cluster [Discovery](https://www.carc.usc.edu/user-information/user-guides/hpc-basics/discovery-resources) (using `main` Slurm partition)
 
-#### 4.1 Experimental Setup
+### 4.1 Experimental Setup
 
-##### 4.1.1 Setup1
+#### 4.1.1 Setup1
 
 ```bash
 #SBATCH --nodes=8
@@ -152,7 +152,7 @@ This experiment is carried out on CARC's general-use HPC cluster [Discovery](htt
 INPUT_FILE=input20.in
 ```
 
-##### 4.1.2 Setup2
+#### 4.1.2 Setup2
 
 ```bash
 #SBATCH --nodes=16
@@ -160,7 +160,7 @@ INPUT_FILE=input20.in
 INPUT_FILE=input20.in
 ```
 
-#### 4.2 Method
+### 4.2 Method
 
 For each setup:
 
@@ -168,9 +168,9 @@ For each setup:
 2. Record the execution time of each run
 3. Calculate the average execution time of sequential FFT and parallel FFT
 
-#### 4.3 Result
+### 4.3 Result
 
-##### 4.3.1 Result of Setup1
+#### 4.3.1 Result of Setup1
 
 ```bash
 ==========================================
@@ -197,7 +197,7 @@ Execution time (s): 4.1618305
 | ------------------------------- | ------------------ | -------------------------- |
 | Average Execution Time (Second) | 10.227008333333334 | 4.091674557666667          |
 
-##### 4.3.2 Result of Setup2
+#### 4.3.2 Result of Setup2
 
 ```bash
 ==========================================
@@ -224,11 +224,11 @@ Execution time (s): 3.024810756
 | ------------------------------- | ----------------- | -------------------------- |
 | Average Execution Time (Second) | 7.888008770666666 | 3.0162059243333332         |
 
-##### 4.3.3 Result of Setup1 and Setup2
+#### 4.3.3 Result of Setup1 and Setup2
 
 <img src="imgs/carc_res.png" style="zoom:80%;" />
 
-#### 4.4 Analysis
+### 4.4 Analysis
 
 The experimental results show that 
 
