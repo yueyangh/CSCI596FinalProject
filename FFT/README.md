@@ -23,9 +23,9 @@ A **fast Fourier transform** (**FFT**) is an algorithm that computes the [discre
 ##### 1.2.2 Example
 
 + The diagram below is a FFT butterfly diagram ($N=16,P=4$)
-+ [$a_0$, $a_1$, ..., $a_{15}$] is the input sequence
-+ [$b_0$, $b_1$, ..., $b_{15}$] is the output sequence
-+ Each rank is assigned to 4 numbers, e.g., Rank0 has [$a_0$, $a_1$, $a_2$, $a_3$]
++ [ $a_0$, $a_1$, ..., $a_{15}$ ] is the input sequence
++ [ $b_0$, $b_1$, ..., $b_{15}$ ] is the output sequence
++ Each rank is assigned to 4 numbers, e.g., Rank0 has [ $a_0$, $a_1$, $a_2$, $a_3$ ]
 + Stage1 and Stage2 don't involve inter-rank communication
 + Inter-rank communication is necessary for Stage 3 and Stage 4.
 
