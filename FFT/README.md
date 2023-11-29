@@ -23,9 +23,9 @@ A **fast Fourier transform** (**FFT**) is an algorithm that computes the [discre
 #### 1.2.2 Example
 
 + The diagram below is a FFT butterfly diagram ($N=16,P=4$)
-+ [ $a_0$, $a_1$, ..., $a_{15}$ ] is the input sequence
-+ [ $b_0$, $b_1$, ..., $b_{15}$ ] is the output sequence
-+ Each rank is assigned to 4 numbers, e.g., Rank0 has [ $a_0$, $a_1$, $a_2$, $a_3$ ]
++ [$a_0$, $a_1$, ..., $a_{15}$] is the input sequence
++ [$b_0$, $b_1$, ..., $b_{15}$] is the output sequence
++ Each rank is assigned to 4 numbers, e.g., Rank0 has [$a_0$, $a_1$, $a_2$, $a_3$]
 + Stage1 and Stage2 don't involve inter-rank communication
 + Inter-rank communication is necessary for Stage 3 and Stage 4.
 
@@ -88,7 +88,7 @@ A **fast Fourier transform** (**FFT**) is an algorithm that computes the [discre
 
 ### 3.1 Experimental Setup
 
-* **CPU**: Apple M1 Pro (8 physcal core)
+* **CPU**: Apple M1 Pro (8 physcal cores)
 * **Input**: input20.in ($2^{20} = 1048576$ numbers)
 
 ### 3.2 Method
@@ -140,9 +140,9 @@ The experimental results show that parallel FFT runs faster than sequential FFT 
 
 ## 4. Experiment (USC CARC)
 
-This experiment is carried out on CARC's general-use HPC cluster [Discovery](https://www.carc.usc.edu/user-information/user-guides/hpc-basics/discovery-resources) (using `main` Slurm partition)
-
 ### 4.1 Experimental Setup
+
+This experiment is carried out on CARC's general-use HPC cluster [Discovery](https://www.carc.usc.edu/user-information/user-guides/hpc-basics/discovery-resources) (using `main` Slurm partition)
 
 #### 4.1.1 Setup1
 
@@ -221,8 +221,8 @@ Execution time (s): 3.024810756
 <img src="imgs/carc16_res.png" style="zoom:80%;" />
 
 |                                 | Sequential FFT    | Parallel FFT using 16 ranks |
-| ------------------------------- | ----------------- | -------------------------- |
-| Average Execution Time (Second) | 7.888008770666666 | 3.0162059243333332         |
+| ------------------------------- | ----------------- | --------------------------- |
+| Average Execution Time (Second) | 7.888008770666666 | 3.0162059243333332          |
 
 #### 4.3.3 Result of Setup1 and Setup2
 
