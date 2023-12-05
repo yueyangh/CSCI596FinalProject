@@ -1,0 +1,132 @@
+Running for n=10 with 2 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.000005
+Parallel Dijkstra Execution Time(s): 0.000045 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.000004
+Parallel Dijkstra Execution Time(s): 0.000010 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.000007
+Parallel Dijkstra Execution Time(s): 0.000010 
+
+Running for n=10 with 4 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.000003
+Parallel Dijkstra Execution Time(s): 0.000034 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.000008
+Parallel Dijkstra Execution Time(s): 0.000033 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.000003
+Parallel Dijkstra Execution Time(s): 0.000041 
+
+Running for n=10 with 8 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.000004
+Parallel Dijkstra Execution Time(s): 0.000145 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.000007
+Parallel Dijkstra Execution Time(s): 0.000693 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.000003
+Parallel Dijkstra Execution Time(s): 0.000310 
+
+Running for n=100 with 2 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.000058
+Parallel Dijkstra Execution Time(s): 0.001013 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.000062
+Parallel Dijkstra Execution Time(s): 0.000798 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.000061
+Parallel Dijkstra Execution Time(s): 0.000984 
+
+Running for n=100 with 4 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.000062
+Parallel Dijkstra Execution Time(s): 0.001796 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.000057
+Parallel Dijkstra Execution Time(s): 0.001131 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.000057
+Parallel Dijkstra Execution Time(s): 0.001113 
+
+Running for n=100 with 8 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.000059
+Parallel Dijkstra Execution Time(s): 0.005531 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.000060
+Parallel Dijkstra Execution Time(s): 0.001989 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.000057
+Parallel Dijkstra Execution Time(s): 0.002181 
+
+Running for n=1000 with 2 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.004062
+Parallel Dijkstra Execution Time(s): 0.002437 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.004683
+Parallel Dijkstra Execution Time(s): 0.002458 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.004096
+Parallel Dijkstra Execution Time(s): 0.002454 
+
+Running for n=1000 with 4 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.004335
+Parallel Dijkstra Execution Time(s): 0.001888 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.004275
+Parallel Dijkstra Execution Time(s): 0.001852 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.004015
+Parallel Dijkstra Execution Time(s): 0.001983 
+
+Running for n=1000 with 8 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.004225
+Parallel Dijkstra Execution Time(s): 0.004959 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.004187
+Parallel Dijkstra Execution Time(s): 0.006594 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.004198
+Parallel Dijkstra Execution Time(s): 0.005302 
+
+Running for n=10000 with 2 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.387846
+Parallel Dijkstra Execution Time(s): 0.221296 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.388409
+Parallel Dijkstra Execution Time(s): 0.216888 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.389286
+Parallel Dijkstra Execution Time(s): 0.212410 
+
+Running for n=10000 with 4 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.388547
+Parallel Dijkstra Execution Time(s): 0.124159 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.389805
+Parallel Dijkstra Execution Time(s): 0.119341 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.393923
+Parallel Dijkstra Execution Time(s): 0.119216 
+
+Running for n=10000 with 8 processes
+Run 1:
+Serial Dijkstra Execution Time(s): 0.460432
+Parallel Dijkstra Execution Time(s): 0.239963 
+Run 2:
+Serial Dijkstra Execution Time(s): 0.481859
+Parallel Dijkstra Execution Time(s): 0.225297 
+Run 3:
+Serial Dijkstra Execution Time(s): 0.458769
+Parallel Dijkstra Execution Time(s): 0.223213 
+
