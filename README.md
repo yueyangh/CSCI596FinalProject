@@ -1,4 +1,4 @@
-# CSCI596 Final Project - Paralle Computational Analysis of Various Alogrithms
+# CSCI596 Final Project - Parallel Computational Analysis of Various Alogrithms
 
 ## 1. Overview
 
