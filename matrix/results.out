@@ -1,0 +1,56 @@
+np=2, m=1000
+Cost 1.90614 seconds in parallel.
+Cost 3.93018 seconds in serial. 
+
+np=4, m=1000
+Cost 0.76092 seconds in parallel.
+Cost 4.01892 seconds in serial. 
+
+np=8, m=1000
+Cost 0.71469 seconds in parallel.
+Cost 4.08090 seconds in serial. 
+
+np=2, m=2000
+Cost 16.56475 seconds in parallel.
+Cost 30.50427 seconds in serial. 
+
+np=4, m=2000
+Cost 7.72016 seconds in parallel.
+Cost 30.27654 seconds in serial. 
+
+np=8, m=2000
+Cost 6.47323 seconds in parallel.
+Cost 30.73831 seconds in serial. 
+
+np=2, m=3000
+Cost 59.37654 seconds in parallel.
+Cost 117.31765 seconds in serial. 
+
+np=4, m=3000
+Cost 29.43350 seconds in parallel.
+Cost 120.54387 seconds in serial. 
+
+np=8, m=3000
+Cost 21.07685 seconds in parallel.
+Cost 118.93076 seconds in serial. 
+
+np=2, m=4000
+Cost 172.93488 seconds in parallel.
+Cost 324.18304 seconds in serial. 
+
+np=4, m=4000
+Cost 82.09531 seconds in parallel.
+Cost 311.30469 seconds in serial. 
+
+np=8, m=4000
+Cost 59.29916 seconds in parallel.
+Cost 337.06139 seconds in serial. 
+
+
+
+
+ 
+
+
+
+
