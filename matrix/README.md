@@ -2,11 +2,11 @@
 
 ## 1. Introduction
 
-This project uses MPI (Message Passing Interface) to explore the simple implementation of matrix multiplication algorithms in serial and parallel modes, examining the relationship between computation time and matrix size.The code and analyses are inspired by [GitHub:parallel-matrix-multiply](https://github.com/fengfu-chris/parallel-matrix-multiply).
+This project uses MPI (Message Passing Interface) to explore the simple implementation of matrix multiplication algorithms in serial and parallel modes, examining the relationship between computation time and matrix size. The code and analyses are inspired by [GitHub:parallel-matrix-multiply](https://github.com/fengfu-chris/parallel-matrix-multiply).
 
 ### 1.1 Background
 
-**Matrix Multiplication:** Given matrices A and B, where A is an m*p size matrix and B is a p*n size matrix. Solve for C = A*B. The simplest algorithm to solve this problem is to iterate through the rows of A and the columns of B to find the corresponding elements of C, with time complexity O(mnp) and space complexity O(1). 
+**Matrix Multiplication:** Given matrices A(m*p) and B(p*n). Solve for C = A*B. The simplest algorithm to solve this problem is to iterate through the rows of A and the columns of B to find the corresponding elements of C, with time complexity O(mnp) and space complexity O(1). 
 ```bash
 for(int i=0; i<m; i++){
     for(int j=0; j<n; j++){
@@ -23,7 +23,7 @@ The elements of each row of matrix C are solved independently. When the matrices
 
 ### 1.2 Implementation Overview
 
-Implementing Parallel Computing with ++ MPI Programming. Individual processes execute in an arbitrary time order and are not dependent on each other. Distributed storage of data with independent backups. Processes communicate with each other through multiple communication schemes.
+Implementing Parallel Computing with C++ MPI Programming. Individual processes execute in an arbitrary time order and are not dependent on each other. Distributed storage of data with independent backups. Processes communicate with each other through multiple communication schemes.
 
 1. Divide A and C into np chunks by rows.
 2. The process reads the corresponding chunks of A and matrix B according to the process number.
