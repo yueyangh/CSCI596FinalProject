@@ -18,6 +18,12 @@ This project demonstrates parallel computing with MPI and OpenMP through the imp
 * **Implementation**: Provides both serial and parallelized MPI-based solutions to explore performance under different system scales.
 * **Further Reading**: Comprehensive information, including experimental setups and optimization strategies, is available in the [Dijkstra documentation](Dijkstra/README.md).
 
+### 2.3 Matrix Multiplication
+
+* **Purpoese**: Demonstrate efficiency gains in matrix multiplication using MPI for parallel processing.
+* **Implementation**: For Serial, basic loop-based multiplication is used, while for Parallel, MPI is utilized for workload distribution across multiple processors.
+* **Further Reading**: [Matrix documentation](matrix/README.md).
+
 ## 3. Result and Analysis
 
 ### 3.1 FFT
@@ -36,6 +42,13 @@ This project demonstrates parallel computing with MPI and OpenMP through the imp
 * **Optimal Process Count**: Best performance observed with a moderate number of processes (2 or 4), as using too many processes (e.g., 8) introduces communication overheads that outweigh computational benefits, especially on larger graphs.
 * **Overhead in Small Graphs**: For small graphs (e.g., 10 vertices), the serial implementation is more efficient due to the overhead of parallelization in MPI.
 
+### 3.3 Matrix Multiplication
+<img src="matrix/imgs/res_graph.jpg" style="zoom:80%;" />
+
+* **Serial vs. Parallel**: The parallel method outperforms serial as matrix size increases, though less markedly for small matrices.
+* **Scalability**: Execution time reduces with more processors, confirming the parallel algorithm scales effectively.
+* **Performance Bottleneck**: A potential saturation point for processor addition hints at communication and management overhead limiting further gains.
+
 ## 4. Conclusion
 
 The project's experimental outcomes, conducted on Apple M1 processor and the USC CARC HPC cluster, affirm that while parallel computing can substantially accelerate computations, the level of improvement is contingent on the task complexity, the number of processes, and the computing environment. These results advocate for the judicious application of parallel computing strategies to optimize algorithmic performance effectively.
@@ -43,3 +56,4 @@ The project's experimental outcomes, conducted on Apple M1 processor and the USC
 ## 5. Acknowledgement
 * FFT part based on [MPI for Python](https://github.com/mpi4py/mpi4py)
 * Dijkstra's part inspired by [Lehmannhen's MPI-Dijkstra GitHub repository](https://github.com/Lehmannhen/MPI-Dijkstra/tree/master)
+* Matrix Multiplication based on [parallel-matrix-multiply](https://github.com/fengfu-chris/parallel-matrix-multiply)
