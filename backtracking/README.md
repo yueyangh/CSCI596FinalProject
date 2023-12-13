@@ -9,6 +9,9 @@ This project uses OpenMP (Open Multi-Processing) to implement a extended version
 **N-Queens problem:** Place n queens on an n*n chess board so that no two queens can be on the same horizontal, vertical, or diagonal line.
 
 ```bash
+
+int k=1; //Search at the beginning of the second line
+x[1] = -1;
 while(k>0 && !resultfind){
     x[k]+=1;
     while((x[k]<n)&&!canput(x,k)){
@@ -52,10 +55,6 @@ Set n threads to solve together, that is, the i thread can place a piece in row 
 * **N-Queens_parallel.cpp**
 
   Parallel implementation of N-Queens problem mutiplication utilizing OpenMP
-  
-* **make.sh**
-
-  A shell script for Compiling 
   
 * **parallel.out**
 
@@ -102,7 +101,7 @@ Set n threads to solve together, that is, the i thread can place a piece in row 
 
 ### 3.4 Analysis
 
-The experimental results show that
+The experimental results show that:
 + Runtime tends to increase as the N increases.
 + When N is small, the advantage of parallel computing over serial computing is not obvious. This may be because parallel algorithms require some additional overhead, such as thread creation and synchronization. These costs may outweigh the benefits of parallel execution when the problem size is small. 
 + The performance improvement of parallel algorithms is usually more noticeable when the problem size is larger. For smaller problem sizes, the advantages of a serial algorithm may be more significant.
