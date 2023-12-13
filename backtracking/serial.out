@@ -1,0 +1,28 @@
+n = 19, Cost 0.001887 seconds in serial.
+---------------------
+n = 20, Cost 0.169977 seconds in serial.
+---------------------
+n = 21, Cost 0.007854 seconds in serial.
+---------------------
+n = 22, Cost 1.70067 seconds in serial.
+---------------------
+n = 23, Cost 0.026198 seconds in serial.
+---------------------
+n = 24, Cost 0.469532 seconds in serial.
+---------------------
+n = 25, Cost 0.592157 seconds in serial.
+---------------------
+n = 26, Cost 0.540686 seconds in serial.
+---------------------
+n = 27, Cost 0.607921 seconds in serial.
+---------------------
+n = 28, Cost 4.43235 seconds in serial.
+---------------------
+n = 29, Cost 2.33766 seconds in serial.
+---------------------
+n = 30, Cost 95.0944 seconds in serial.
+---------------------
+n = 31, Cost 52.9382 seconds in serial.
+---------------------
+n = 32, Cost 165.178 seconds in serial.
+---------------------

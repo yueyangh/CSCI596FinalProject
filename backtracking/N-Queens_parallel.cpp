@@ -56,11 +56,13 @@ void nQueens(int* x, int n) {
 
 int main() {
     omp_set_num_threads(16);
-    for (int n = 21; n < 33; n++) {
+    for (int n = 19; n < 33; n++) {
         int* x = new int[n];
         clock_t t = clock();
         nQueens(x, n);
         t = clock() - t;
+
+        // Check for errors in the solution
         for (int i = 0; i < n; i++) {
             if (x[i] < 0 || x[i] >= n) {
                 cout << "error!" << endl;
@@ -75,8 +77,13 @@ int main() {
                 }
             }
         }
+
+        // Print the output in the desired format
+        cout << "n = " << n << ", Cost " << (double)t / CLOCKS_PER_SEC << " seconds in parallel." << endl;
+
         delete[] x;
-        cout << "\t" << (double)t / CLOCKS_PER_SEC << endl;
+
+        cout << "---------------------" << endl;
     }
     return 0;
 }
