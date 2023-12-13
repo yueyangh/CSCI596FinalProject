@@ -1,0 +1,28 @@
+n = 19, Cost 0.023414 seconds in parallel.
+---------------------
+n = 20, Cost 0.072978 seconds in parallel.
+---------------------
+n = 21, Cost 0.065041 seconds in parallel.
+---------------------
+n = 22, Cost 0.096222 seconds in parallel.
+---------------------
+n = 23, Cost 0.086117 seconds in parallel.
+---------------------
+n = 24, Cost 0.390804 seconds in parallel.
+---------------------
+n = 25, Cost 0.423175 seconds in parallel.
+---------------------
+n = 26, Cost 1.60238 seconds in parallel.
+---------------------
+n = 27, Cost 3.82422 seconds in parallel.
+---------------------
+n = 28, Cost 17.9967 seconds in parallel.
+---------------------
+n = 29, Cost 6.62156 seconds in parallel.
+---------------------
+n = 30, Cost 5.87741 seconds in parallel.
+---------------------
+n = 31, Cost 9.25982 seconds in parallel.
+---------------------
+n = 32, Cost 38.7812 seconds in parallel.
+---------------------

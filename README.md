@@ -24,6 +24,12 @@ This project demonstrates parallel computing with MPI and OpenMP through the imp
 * **Implementation**: For Serial, basic loop-based multiplication is used, while for Parallel, MPI is utilized for workload distribution across multiple processors.
 * **Further Reading**: [Matrix documentation](matrix/README.md).
 
+### 2.4 N-Queens Problem
+
+* **Purpoese**: To demonstrate the efficiency gains of serial processing versus parallel processing using OpenMP for N-Queen problems with increasing N.
+* **Implementation**: For serial, basic simple iteration and backtracking is used, while for parallel, openMP is used for workload distribution across multiple threads.
+* **Further Reading**: [backtracking documentation](backtracking/README.md).
+
 ## 3. Result and Analysis
 
 ### 3.1 FFT
@@ -49,6 +55,13 @@ This project demonstrates parallel computing with MPI and OpenMP through the imp
 * **Scalability**: Execution time reduces with more processors, confirming the parallel algorithm scales effectively.
 * **Performance Bottleneck**: A potential saturation point for processor addition hints at communication and management overhead limiting further gains.
 
+### 3.4 N-Queens Problem
+<img src="backtracking/imgs/compare_results.jpg" style="zoom:80%;" />
+
+* **Serial vs. Parallel**: As the number of queens and the size of checkerboard increases, the parallel method is superior to the serial method, although it is less obvious for small-scale N-Queen problems.
+* **Optimizability**: As the number of queens and the size of checkerboard increases, the workload of each iteration becomes larger, at this time parallelization may provide better performance, and it is determined that parallel algorithms have more obvious advantages when dealing with large-scale data groups.
+* **Performance Bottleneck**: Parallel algorithms require some additional overhead, such as thread creation and synchronization. This limits the further gains of parallel algorithms on small iterative problems.
+
 ## 4. Conclusion
 
 The project's experimental outcomes, conducted on Apple M1 processor and the USC CARC HPC cluster, affirm that while parallel computing can substantially accelerate computations, the level of improvement is contingent on the task complexity, the number of processes, and the computing environment. These results advocate for the judicious application of parallel computing strategies to optimize algorithmic performance effectively.
@@ -57,3 +70,5 @@ The project's experimental outcomes, conducted on Apple M1 processor and the USC
 * FFT part based on [MPI for Python](https://github.com/mpi4py/mpi4py)
 * Dijkstra's part inspired by [Lehmannhen's MPI-Dijkstra GitHub repository](https://github.com/Lehmannhen/MPI-Dijkstra/tree/master)
 * Matrix Multiplication based on [parallel-matrix-multiply](https://github.com/fengfu-chris/parallel-matrix-multiply)
+* N-Queens problem's part based on [Eight-Queens Problem](https://github.com/harry1357931/Eight-Queens-Problem-cpp/tree/master)
+
